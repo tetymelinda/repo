@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Membuat array berisi daftar nama
+    string arr[] = {"Rafly", "Abdul", "Bachtiar", "Khaila", "Riki", "Maul"};
+    
+    // Menghitung jumlah elemen dalam array secara otomatis
+    int size = sizeof(arr) / sizeof(arr[0]);
+    
+    // Variabel penanda apakah data ditemukan atau tidak
+    bool find = false;
+
+    // Nama yang ingin dicari
+    string target = "Bachtiar";
+
+    // Proses pencarian menggunakan perulangan
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == target) {
+            cout << "Nama " << arr[i] << " ditemukan pada Index ke-" << i;
+            find = true;
+            break; // Berhenti mencari jika sudah ketemu
+        }
+    }
+
+    // Pesan jika data tidak ada di dalam array
+    if (!find) {
+        cout << "Data tidak ditemukan";
+    }
+
+    return 0;
+}
